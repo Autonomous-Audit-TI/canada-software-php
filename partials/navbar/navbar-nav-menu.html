@@ -1,0 +1,108 @@
+<!-- Landings -->
+<li class="hs-has-mega-menu nav-item">
+  <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle @@if(category=='landings'){active}" aria-current="page" href="#" role="button" aria-expanded="false">Soluções</a>
+
+  <!-- Mega Menu -->
+  <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="landingsMegaMenu" style="min-width: 30rem;">
+    <div class="row">
+      <div class="col-lg-6 d-none d-lg-block">
+        <!-- Banner Image -->
+        <div class="navbar-dropdown-menu-banner" style="background-image: url(assets/svg/components/shape-3.svg);">
+          <div class="navbar-dropdown-menu-banner-content">
+            <div class="mb-4">
+              <span class="h2 d-block">Construímos software que trabalha pra você</span>
+              <p>Somos uma empresa que trabalha   para tornar os desafios tecnológicos das empresas uma atividade possível, segura e descomplicada.
+              </p>
+            </div>
+            <a class="btn btn-primary btn-transition" href="#">Saiba mais...<i class="bi-chevron-right small"></i></a>
+          </div>
+        </div>
+        <!-- End Banner Image -->
+      </div>
+      <!-- End Col -->
+
+      <div class="col-lg-6">
+        <div class="navbar-dropdown-menu-inner">
+          <div class="row">
+            <div class="col-sm mb-3 mb-sm-0">
+              <span class="dropdown-header">Softwares para...</span>
+              <a class="dropdown-item @@if(link=='landing-classic-corporate.html'){active}" href="landing-classic-corporate.html">Digitalização de documentos</a>
+              <a class="dropdown-item @@if(link=='landing-classic-analytics.html'){active}" href="landing-classic-analytics.html">Documentos jurídicos<span class="badge bg-primary rounded-pill ms-1">Novo</span></a>
+              <a class="dropdown-item @@if(link=='landing-classic-studio.html'){active}" href="landing-classic-studio.html">Governança/LGPD/Compliance</a>
+              <a class="dropdown-item @@if(link=='landing-classic-marketing.html'){active}" href="landing-classic-marketing.html">Saúde / Tele-Atendimento / Digital</a>
+              <a class="dropdown-item @@if(link=='landing-classic-advertisement.html'){active}" href="landing-classic-advertisement.html">Mobilidade Urbana</a>
+              <a class="dropdown-item @@if(link=='landing-classic-consulting.html'){active}" href="landing-classic-consulting.html">Telefonia VOIP</a>
+              <a class="dropdown-item @@if(link=='landing-classic-portfolio.html'){active}" href="landing-classic-portfolio.html">Chat Bot AI<span class="badge bg-primary rounded-pill ms-1">Novo</span></a>
+              <a class="dropdown-item @@if(link=='landing-classic-software.html'){active}" href="landing-classic-software.html">Segurança do trabalho</a>
+              <a class="dropdown-item @@if(link=='landing-classic-business.html'){active}" href="landing-classic-business.html">Vídeo conferência privada</a>
+            </div>
+            <!-- End Col -->
+
+            <div class="col-sm">
+              <div class="mb-3">
+                <span class="dropdown-header">SaaS</span>
+                <a class="dropdown-item @@if(link=='landing-app-ui-kit.html'){active}" href="landing-app-ui-kit.html">N8N</a>
+                <a class="dropdown-item @@if(link=='landing-app-saas.html'){active}" href="landing-app-saas.html">Mulesoft</a>
+                <a class="dropdown-item @@if(link=='landing-app-workflow.html'){active}" href="landing-app-workflow.html">BaaS / Broker</a>
+                <a class="dropdown-item @@if(link=='landing-app-payment.html'){active}" href="landing-app-payment.html">Integração de pagamentos</a>
+                <a class="dropdown-item @@if(link=='landing-app-tool.html'){active}" href="landing-app-tool.html">Assinatura digital</a>
+              </div>
+
+              <span class="dropdown-header">Treinamentos</span>
+              <a class="dropdown-item @@if(link=='landing-onepage-corporate.html'){active}" href="landing-onepage-corporate.html">Ferramentas Low Code</a>
+              <a class="dropdown-item @@if(link=='landing-onepage-saas.html'){active}" href="landing-onepage-saas.html">Engenharia CASE<span class="badge bg-primary rounded-pill ms-1">Hot</span></a>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Mega Menu -->
+</li>
+<!-- End Landings -->
+
+<!-- Company -->
+<li class="hs-has-sub-menu nav-item">
+  <a id="companyMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle @@if(category=='company'){active}" href="#" role="button" aria-expanded="false">A empresa</a>
+
+  <!-- Mega Menu -->
+  <div class="hs-sub-menu dropdown-menu" aria-labelledby="companyMegaMenu" style="min-width: 14rem;">
+    <a class="dropdown-item @@if(link=='page-about.html'){active}" href="page-about.html">Nosso time</a>
+    <a class="dropdown-item @@if(link=='page-services.html'){active}" href="page-services.html">Unidades</a>
+   
+  </div>
+  <!-- End Mega Menu -->
+</li>
+<!-- End Company -->
+
+<!-- Account -->
+<li class="hs-has-sub-menu nav-item">
+  <a id="accountMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle @@if(category=='account'){active}" href="#" role="button" aria-expanded="false">Acesso</a>
+
+  <!-- Mega Menu -->
+  <div class="hs-sub-menu dropdown-menu" aria-labelledby="accountMegaMenu" style="min-width: 14rem;">
+    <!-- Authentication -->
+    <div class="hs-has-sub-menu nav-item">
+      
+      <a id="authenticationMegaMenu" class="hs-mega-menu-invoker dropdown-item dropdown-toggle" href="#" role="button" aria-expanded="false">Clientes</a>
+
+      <div class="hs-sub-menu dropdown-menu" aria-labelledby="authenticationMegaMenu" style="min-width: 14rem;">
+        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Login </a>
+
+      </div>
+    </div>
+    <!-- End Authentication -->
+    
+    <a class="dropdown-item @@if(link=='account-overview.html'){active}" href="account-overview.html">Colaboradores</a>
+   
+  </div>
+  <!-- End Mega Menu -->
+</li>
+<!-- End Account -->
+
+
+<!-- End Portfolio -->
