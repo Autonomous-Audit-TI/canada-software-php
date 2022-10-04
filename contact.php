@@ -1,18 +1,3 @@
-<?php
-include 'db.php';
-
-$article_id = htmlspecialchars($_GET["article"]);
-$query = "SELECT * FROM blog_post INNER JOIN author ON blog_post.author = author.author_name WHERE blog_post.id = {$article_id}";
-$sql = mysqli_query($conexao, $query) or die(mysqli_connect_error());
-mysqli_query($conexao, "UPDATE blog_post SET views = (views + 1) WHERE id = {$article_id}");
-
-$article=mysqli_fetch_all($sql, MYSQLI_ASSOC)[0];
-
-mysqli_close($conexao);
-
-$article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $article["author_picture"];
-?>
-
 <!DOCTYPE html>
 <html lang="@@languageDirection.lang" dir="@@if(languageDirection.isRTL){rtl}">
 <head>
@@ -21,7 +6,7 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>Blog: Article | <?php echo $article["title"]; ?> </title>
+  <title>Contact us</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
@@ -46,134 +31,11 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
 
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
-    <!-- Article Description -->
-    <div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
-      <div class="w-lg-65 mx-lg-auto">
-        <div class="mb-4">
-          <h1 class="h2" id="post_title"><?php echo $article["title"]; ?></h1>
-        </div>
-
-        <div class="row align-items-sm-center mb-5">
-          <div class="col-sm-7 mb-4 mb-sm-0">
-            <!-- Media -->
-            <div class="d-flex align-items-center">
-              <div class="flex-shrink-0">
-                <img id="post_author_image" class="avatar avatar-circle" src=<?php echo "assets/img/160x160/".$article["author_picture"]; ?> alt="Image Description">
-              </div>
-
-              <div class="flex-grow-1 ms-3">
-                <h5 class="mb-0">
-                  <a class="text-dark" id="post_author" href="#"><?php echo $article["author_name"]; ?></a>
-                </h5>
-                <span id="post_date" class="d-block small"><?php echo $article["createdAt"]; ?></span>
-              </div>
-            </div>
-            <!-- End Media -->
-          </div>
-          <!-- End Col -->
-
-          <div class="col-sm-5">
-            <div class="d-flex justify-content-sm-end align-items-center">
-              <span class="text-cap mb-0 me-2">Share:</span>
-
-              <div class="d-flex gap-2">
-                <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#">
-                  <i class="bi-facebook"></i>
-                </a>
-                <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#">
-                  <i class="bi-twitter"></i>
-                </a>
-                <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#">
-                  <i class="bi-instagram"></i>
-                </a>
-                <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#">
-                  <i class="bi-telegram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- End Col -->
-        </div>
-        <!-- End Row -->
-      </div>
-
-
-      <div class="w-lg-65 mx-lg-auto" id="post_content">
-        <?php 
-        echo $article["content"]; 
-        ?>
-      </div>
-
-      <div class="w-lg-65 mx-lg-auto">
-        <!-- Card -->
-        <div class="card bg-dark text-center my-4" style="background-image: url(assets/svg/components/wave-pattern-light.svg);">
-          <div class="card-body">
-            <h4 class="text-white mb-4">Like what you're reading? Subscribe to our top stories.</h4>
-
-            <div class="w-lg-75 mx-lg-auto">
-              <form id="newsletter_form">
-                <!-- Input Card -->
-                <div class="input-card input-card-sm border">
-                  <div class="input-card-form">
-                    <label for="email_input" class="form-label visually-hidden">Enter email</label>
-                    <input type="email" class="form-control" id="email_input" placeholder="Enter email" aria-label="Enter email">
-                  </div>
-                  <button type="submit" class="btn btn-primary">Subscribe</button>
-                </div>
-                <!-- End Input Card -->
-              </form>
-            </div>
-          </div>
-        </div>
-        <!-- End Card -->
-
-      </div>
-    </div>
-    <!-- End Article Description -->
-
-    <!-- User Profile -->
-    <div class="container content-space-t-1 mb-5">
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-8">
-          <div class="mb-5">
-            <h4>About the author</h4>
-          </div>
-
-          <!-- Media -->
-          <div class="d-sm-flex">
-            <div class="flex-shrink-0 mb-3 mb-sm-0">
-              <img class="avatar avatar-xl avatar-circle" src=<?php echo "assets/img/160x160/".$article["author_picture"]; ?> alt="Image Description">
-            </div>
-
-            <div class="flex-grow-1 ms-sm-4">
-              <!-- Media -->
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="mb-0">
-                  <a class="text-dark" href="blog-author-profile.html"><?php echo $article["author_name"];  ?></a>
-                </h3>
-                <button type="button" class="btn btn-outline-primary btn-sm">
-                  <i class="bi-person-plus-fill me-1"></i> Follow
-                </button>
-              </div>
-              <!-- End Media -->
-
-              <p>
-                <?php echo $article["author_about"]; ?>
-              </p>
-            </div>
-          </div>
-          <!-- End Media -->
-        </div>
-      </div>
-    </div>
-    <!-- End User Profile -->
-
-    <iframe id="frame" style="display: none;"></iframe>
     <!-- Post a Comment -->
-    <div class="container content-space-b-2">
+    <div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
       <!-- Heading -->
       <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-        <h2>Post a comment</h2>
+        <h2>Contact us</h2>
       </div>
       <!-- End Heading -->
 

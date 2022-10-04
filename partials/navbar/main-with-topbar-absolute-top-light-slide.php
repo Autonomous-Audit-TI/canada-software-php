@@ -1,3 +1,15 @@
+<?php 
+//ir no banco, pegar a logo e todos os itens do menu
+include 'db.php';
+
+$query = "SELECT * FROM menu_solucoes";
+$sql = mysqli_query($conexao, $query) or die(mysqli_connect_error());
+
+$menu_result=mysqli_fetch_all($sql, MYSQLI_ASSOC);
+
+mysqli_close($conexao);
+?>
+
 <header id="header" class="navbar navbar-expand-lg navbar-end navbar-absolute-top navbar-dark navbar-show-hide"
         data-hs-header-options='{
           "fixMoment": 1000,
@@ -28,22 +40,10 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <div class="navbar-absolute-top-scroller">
           <ul class="navbar-nav">
-            <?php 
-              /*
-              @@include("../navbar/navbar-nav-menu.html", {
-              "category": "@@category",
-              "subcategory": "@@subcategory",
-              "link": "@@link"
-            })
-              */
-              include "navbar-nav-menu.html";
-
-            
-            ?>
-
+            <?php include "navbar-nav-menu.php"; ?>
             <!-- Button -->
             <li class="nav-item">
-              <a class="btn btn-light btn-transition" href="https://themes.getbootstrap.com/product/front-multipurpose-responsive-template/" target="_blank">Fale conosco</a>
+              <a class="btn btn-light btn-transition" href="contact.php" target="_blank">Fale conosco</a>
             </li>
             <!-- End Button -->
           </ul>
