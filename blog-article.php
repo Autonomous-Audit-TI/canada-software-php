@@ -41,7 +41,7 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
 
 <body>
   <!-- ========== HEADER ========== -->
-  <?php include "partials/navbar/main-with-topbar-absolute-top-light-slide.php"; ?>
+  <?php include "partials/navbar/main-with-topbar-absolute-top-slide.php"; ?>
   <!-- ========== END HEADER ========== -->
 
   <!-- ========== MAIN CONTENT ========== -->
