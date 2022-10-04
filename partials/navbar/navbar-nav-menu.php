@@ -1,5 +1,4 @@
 <?php
-  $is_new_html = "<span class='badge bg-primary rounded-pill ms-1'>Novo</span>";
   $categories = [];
   foreach ($menu_result as $value) {
     array_push($categories, $value["category"]);
@@ -34,9 +33,9 @@
       <div class="col-lg-6">
         <div class="navbar-dropdown-menu-inner">
           <div class="row">
-            <div class="col-sm mb-3 mb-sm-0">
-
+            
             <?php foreach ($categories as $category) { ?>
+              <div class="col-sm mb-3 mb-sm-0">
               <span class="dropdown-header"><?php echo $category; ?></span>
 
               <?php 
@@ -52,19 +51,19 @@
                       }
                       echo ">{$title}";
                       if ($is_new){
-                        echo $is_new_html;
+                        echo "<span class='badge bg-primary rounded-pill ms-1'>Novo</span>";
                       }
                       echo "</a>";
                   }
                 }
               ?>   
 
+                </div>
+                <!-- End Col -->
               <?php
                 }
               ?>
               
-            </div>
-            <!-- End Col -->
           </div>
           <!-- End Row -->
         </div>
@@ -83,8 +82,8 @@
 
   <!-- Mega Menu -->
   <div class="hs-sub-menu dropdown-menu" aria-labelledby="companyMegaMenu" style="min-width: 14rem;">
-    <a class="dropdown-item" href="page-about.html">Nosso time</a>
-    <a class="dropdown-item" href="page-services.html">Unidades</a>
+    <a class="dropdown-item" href="blog-article.php?article=1">Nosso time</a>
+    <a class="dropdown-item" href="blog-article.php?article=2">Unidades</a>
    
   </div>
   <!-- End Mega Menu -->

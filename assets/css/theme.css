@@ -3571,7 +3571,7 @@ textarea.form-control-lg {
   padding: var(--bs-dropdown-header-padding-y) var(--bs-dropdown-header-padding-x);
   margin-bottom: 0;
   font-size: 0.875rem;
-  color: var(--bs-dropdown-header-color);
+  color: #377dff;
   white-space: nowrap;
 }
 
