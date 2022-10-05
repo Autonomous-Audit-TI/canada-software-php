@@ -9,12 +9,12 @@
 
 <!-- Landings -->
 <li class="hs-has-mega-menu nav-item">
-  <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle @@if(category=='landings'){active}" aria-current="page" href="#" role="button" aria-expanded="false">Soluções</a>
+  <a id="landingsMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle" aria-current="page" href="#" role="button" aria-expanded="false">Soluções</a>
 
   <!-- Mega Menu -->
   <div class="hs-mega-menu dropdown-menu w-100" aria-labelledby="landingsMegaMenu" style="min-width: 30rem;">
     <div class="row">
-      <div class="col-lg-6 d-none d-lg-block">
+      <div class="col-lg d-none d-lg-block">
         <!-- Banner Image -->
         <div class="navbar-dropdown-menu-banner" style="background-image: url(assets/svg/components/shape-3.svg);">
           <div class="navbar-dropdown-menu-banner-content">
@@ -30,12 +30,12 @@
       </div>
       <!-- End Col -->
 
-      <div class="col-lg-6">
+      <div class="col-lg">
         <div class="navbar-dropdown-menu-inner">
           <div class="row">
             
             <?php foreach ($categories as $category) { ?>
-              <div class="col-sm mb-3 mb-sm-0">
+              <div class="col-md mb-3 mb-sm-0 pb-2">
               <span class="dropdown-header"><?php echo $category; ?></span>
 
               <?php 

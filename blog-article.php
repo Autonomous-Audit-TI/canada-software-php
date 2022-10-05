@@ -168,65 +168,6 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
     </div>
     <!-- End User Profile -->
 
-    <iframe id="frame" style="display: none;"></iframe>
-    <!-- Post a Comment -->
-    <div class="container content-space-b-2">
-      <!-- Heading -->
-      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
-        <h2>Post a comment</h2>
-      </div>
-      <!-- End Heading -->
-
-      <div class="row justify-content-lg-center">
-        <div class="col-lg-8">
-          <!-- Card -->
-          <div class="card card-lg border shadow-none">
-            <div class="card-body">
-              <form id="comment_form">
-                <div class="d-grid gap-4">
-                  <!-- Form -->
-                  <div class="row">
-                    <div class="col-sm-6 mb-4 mb-sm-0">
-                      <label class="form-label" for="blogContactsFormFirstName">First name</label>
-                      <input type="text" class="form-control form-control-lg" name="firstname" id="firstname" placeholder="First name" aria-label="First name">
-                    </div>
-
-                    <div class="col-sm-6">
-                      <label class="form-label" for="blogContactsFormLasttName">Last name</label>
-                      <input type="text" class="form-control form-control-lg" name="lastname" id="lastname" placeholder="Last name" aria-label="Last name">
-                    </div>
-                  </div>
-                  <!-- End Form -->
-
-                  <!-- Form -->
-                  <span class="d-block">
-                    <label class="form-label" for="blogContactsFormEmail">Your email</label>
-                    <input type="email" class="form-control form-control-lg" name="email" id="email" placeholder="email@site.com" aria-label="email@site.com">
-                  </span>
-                  <!-- End Form -->
-
-                  <!-- Form -->
-                  <span class="d-block">
-                    <label class="form-label" for="blogContactsFormComment">Comment</label>
-                    <textarea class="form-control form-control-lg" id="comment" name="comment" placeholder="Leave your comment here..." aria-label="Leave your comment here..." rows="5"></textarea>
-                  </span>
-                  <!-- End Form -->
-                  
-                  <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Col -->
-      </div>
-      <!-- End Row -->
-    </div>
-    <!-- End Post a Comment -->
-
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
 
@@ -264,7 +205,6 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
 
    <!-- Custom JS -->
    <script src="assets/js/custom/newsletter.js"></script>
-   <script src="assets/js/custom/comment.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>
