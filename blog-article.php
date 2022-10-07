@@ -14,7 +14,7 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
 ?>
 
 <!DOCTYPE html>
-<html lang="@@languageDirection.lang" dir="@@if(languageDirection.isRTL){rtl}">
+<html lang="en-us">
 <head>
   <!-- Required Meta Tags Always Come First -->
   <meta charset="utf-8">

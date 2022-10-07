@@ -43,20 +43,20 @@
             <!-- Button Group -->
             <div class="btn-group">
               <button type="button" class="btn btn-soft-light btn-xs dropdown-toggle" id="footerSelectLanguage" data-bs-toggle="dropdown" aria-expanded="false" data-bs-dropdown-animation>
-                <span class="d-flex align-items-center">
+                <span id="language-active" class="d-flex align-items-center">
                   <img class="avatar avatar-xss avatar-circle me-2" src="assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="Image description" width="16"/>
                   <span>English (US)</span>
                 </span>
               </button>
 
               <div class="dropdown-menu" aria-labelledby="footerSelectLanguage">
-                <a class="dropdown-item d-flex align-items-center active" href="#">
+                <a class="dropdown-item d-flex align-items-center language active" href="?lang=en" data-lang="Inglês">
                   <img class="avatar avatar-xss avatar-circle me-2" src="assets/vendor/flag-icon-css/flags/1x1/us.svg" alt="Image description" width="16"/>
                   <span>English (US)</span>
                 </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img class="avatar avatar-xss avatar-circle me-2" src="assets/vendor/flag-icon-css/flags/1x1/es.svg" alt="Image description" width="16"/>
-                  <span>Español</span>
+                <a class="dropdown-item d-flex align-items-center language" href="?lang=pt" data-lang="Português">
+                  <img class="avatar avatar-xss avatar-circle me-2" src="assets/vendor/flag-icon-css/flags/1x1/br.svg" alt="Image description" width="16"/>
+                  <span>Português</span>
                 </a>
               </div>
             </div>
@@ -76,3 +76,39 @@
     <!-- End Copyright -->
   </div>
 </footer>
+
+<div id="google_translate_element"  style="display: none"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      defaultLanguage: 'en',
+      pageLanguage: 'en',
+      includedLanguages: 'en,pt',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+      autoDisplay: false}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Flag click handler -->
+<script type="text/javascript">
+  $('.language').click(function(e) {
+    e.preventDefault();
+    var lang = $(this).data('lang');
+    
+    $('.language').removeClass("active")
+    $(this).addClass("active")
+
+    $("#language-active").html($(this).html())
+    
+    var $frame = $('.goog-te-menu-frame:first');
+    if (!$frame.size()) {
+      alert("Error: Could not find Google translate frame.");
+      return false;
+    }
+    $frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').get(0).click();
+    return false;
+  });
+</script>
