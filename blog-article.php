@@ -21,7 +21,7 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Title -->
-  <title>Blog: Article | <?php echo $article["title"]; ?> </title>
+  <title>Canada-Software Apps & Software | Blog</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="favicon.ico">
@@ -74,7 +74,7 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
 
           <div class="col-sm-5">
             <div class="d-flex justify-content-sm-end align-items-center">
-              <span class="text-cap mb-0 me-2">Share:</span>
+              <span class="text-cap mb-0 me-2">Compartilhe:</span>
 
               <div class="d-flex gap-2">
                 <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#">
@@ -104,21 +104,21 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
         ?>
       </div>
 
-      <div class="w-lg-65 mx-lg-auto">
+      <div class="w-lg-65 mx-lg-auto mt-4">
         <!-- Card -->
         <div class="card bg-dark text-center my-4" style="background-image: url(assets/svg/components/wave-pattern-light.svg);">
           <div class="card-body">
-            <h4 class="text-white mb-4">Like what you're reading? Subscribe to our top stories.</h4>
+            <h4 class="text-white mb-4">Gostou do que leu? Inscreva-se para receber mais.</h4>
 
             <div class="w-lg-75 mx-lg-auto">
               <form id="newsletter_form">
                 <!-- Input Card -->
                 <div class="input-card input-card-sm border">
                   <div class="input-card-form">
-                    <label for="email_input" class="form-label visually-hidden">Enter email</label>
-                    <input type="email" class="form-control" id="email_input" placeholder="Enter email" aria-label="Enter email">
+                    <label for="email_input" class="form-label visually-hidden">Seu email</label>
+                    <input type="email" class="form-control" id="email_input" placeholder="Seu email" aria-label="Seu email">
                   </div>
-                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                  <button type="submit" class="btn btn-primary">Inscreva-se</button>
                 </div>
                 <!-- End Input Card -->
               </form>
@@ -134,33 +134,41 @@ $article["author_picture"] = $article["author_picture"] == null ? "img1.jpg" : $
     <!-- User Profile -->
     <div class="container content-space-t-1 mb-5">
       <div class="row justify-content-lg-center">
-        <div class="col-lg-8">
+        <div class="col-lg-10">
           <div class="mb-5">
-            <h4>About the author</h4>
+            <h3>Sobre o autor</h3>
           </div>
 
           <!-- Media -->
           <div class="d-sm-flex">
-            <div class="flex-shrink-0 mb-3 mb-sm-0">
+            <div class="mb-3 col-md-2"
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            ">
               <img class="avatar avatar-xl avatar-circle" src=<?php echo "assets/img/160x160/".$article["author_picture"]; ?> alt="Image Description">
+              
+              <p>
+              Encontre <?php echo $article["author_name"]; ?> no
+              <a target="__blank" href="<?php echo $article["author_linkedin"]; ?>"> LinkedIn <i class="bi bi-linkedin"></i></a>
+              </p>
             </div>
 
             <div class="flex-grow-1 ms-sm-4">
               <!-- Media -->
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="mb-0">
-                  <a class="text-dark" href="blog-author-profile.html"><?php echo $article["author_name"];  ?></a>
+                <h3 class="mb-0" style="">
+                  <?php echo $article["author_name"];  ?>
                 </h3>
-                <button type="button" class="btn btn-outline-primary btn-sm">
-                  <i class="bi-person-plus-fill me-1"></i> Follow
-                </button>
               </div>
               <!-- End Media -->
 
-              <p>
+              <p style="font-size: 15px;">
                 <?php echo $article["author_about"]; ?>
               </p>
             </div>
+            
           </div>
           <!-- End Media -->
         </div>

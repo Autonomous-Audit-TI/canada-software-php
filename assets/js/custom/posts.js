@@ -80,7 +80,7 @@ const renderFirstArticleCard = (article, dateOptions) => {
         <div class="d-flex align-items-center">
           <div class="flex-shrink-0">
             <span class="avatar avatar-sm avatar-circle">
-              <img class="avatar-img" src="assets/img/160x160/img3.jpg" alt="Image Description">
+              <img class="avatar-img" src="assets/img/160x160/${article.author_picture || "img1.jpg"}" alt="Image Description">
             </span>
           </div>
 
@@ -129,7 +129,7 @@ const renderArticleCard = (article, dateOptions) => {
               <div class="d-flex">
                 <div class="flex-shrink-0">
                   <a class="avatar avatar-circle" href="/blog-author-profile.html">
-                    <img class="avatar-img" src="assets/img/160x160/img3.jpg" alt="Image Description">
+                    <img class="avatar-img" src="assets/img/160x160/${article.author_picture || "img1.jpg"}" alt="Image Description">
                   </a>
                 </div>
               

@@ -7,6 +7,25 @@ $sql = mysqli_query($conexao, $query) or die(mysqli_connect_error());
 $slides_result=mysqli_fetch_all($sql, MYSQLI_ASSOC);
 
 mysqli_close($conexao);
+
+function tease($body, $sentencesToDisplay = 2) {
+  $nakedBody = preg_replace('/\s+/',' ',strip_tags($body));
+  $sentences = preg_split('/(\.|\?|\!)(\s)/',$nakedBody);
+
+  if (count($sentences) <= $sentencesToDisplay)
+      return $nakedBody;
+
+  $stopAt = 0;
+  foreach ($sentences as $i => $sentence) {
+      $stopAt += strlen($sentence);
+
+      if ($i >= $sentencesToDisplay - 1)
+          break;
+  }
+
+  $stopAt += ($sentencesToDisplay * 2);
+  return trim(substr($nakedBody, 0, $stopAt));
+}
 ?>
 
 <!-- Swiper Main Slider -->
@@ -48,8 +67,6 @@ mysqli_close($conexao);
         }
       ?>
 
-      
-
 
     </div>
 
@@ -61,3 +78,35 @@ mysqli_close($conexao);
     </div>
 </div>
 <!-- End Swiper Main Slider -->
+
+
+<!-- Swiper Thumbs Slider -->
+<div class="d-none d-lg-block container translate-middle-y position-absolute top-50 start-0 end-0 zi-2">
+  <div class="translate-middle-y position-absolute top-50 end-0">
+    <div class="js-swiper-blog-journal-hero-thumbs swiper" style="opacity:0;max-width: 13rem;">
+      <div class="swiper-wrapper">
+      <?php 
+        foreach ($slides_result as $value) {
+      ?>
+
+        <!-- Slide -->
+        <div class="swiper-slide swiper-pagination-progress swiper-pagination-progress-light py-3">
+            <p class="text-white">
+              <?php echo mb_substr($value["slider_text"], 0, 50, 'UTF-8'); ?>...
+            </p>
+
+            <div class="swiper-pagination-progress-body">
+              <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
+            </div>
+          </div>
+          <!-- End Slide -->
+
+      <?php
+        }
+      ?>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Swiper Thumbs Slider -->

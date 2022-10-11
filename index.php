@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 
 include "db.php";
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en-us">
@@ -43,45 +44,6 @@ include "db.php";
 
       <?php include "partials/layouts-components/main-slider.php"; ?>
 
-      <!-- Swiper Thumbs Slider -->
-      <div class="d-none d-lg-block container translate-middle-y position-absolute top-50 start-0 end-0 zi-2">
-        <div class="translate-middle-y position-absolute top-50 end-0">
-          <div class="js-swiper-blog-journal-hero-thumbs swiper" style="opacity:0;max-width: 13rem;">
-            <div class="swiper-wrapper">
-              <!-- Slide -->
-              <div class="swiper-slide swiper-pagination-progress swiper-pagination-progress-light py-3">
-                <p class="text-white">Da entrevista ao MVP com seu cliente...</p>
-
-                <div class="swiper-pagination-progress-body">
-                  <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
-                </div>
-              </div>
-              <!-- End Slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide swiper-pagination-progress swiper-pagination-progress-light py-3">
-                <p class="text-white">Low Code + Code : Acelerando processos de construção...</p>
-
-                <div class="swiper-pagination-progress-body">
-                  <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
-                </div>
-              </div>
-              <!-- End Slide -->
-
-              <!-- Slide -->
-              <div class="swiper-slide swiper-pagination-progress swiper-pagination-progress-light py-3">
-                <p class="text-white">EDI em projetos governamentais e a assinatura eletrônica...</p>
-
-                <div class="swiper-pagination-progress-body">
-                  <div class="js-swiper-pagination-progress-body-helper swiper-pagination-progress-body-helper"></div>
-                </div>
-              </div>
-              <!-- End Slide -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Swiper Thumbs Slider -->
     </div>
     <!-- End Hero -->
 
@@ -117,12 +79,12 @@ include "db.php";
                 <input type="email" id="email_input" class="form-control" placeholder="Enter email" aria-label="Enter email">
               </div>
               <div class="d-grid">
-                <button type="submit" id="newsletter_submit" class="btn btn-primary">Subscribe</button>
+                <button type="submit" id="newsletter_submit" class="btn btn-primary">Inscreva-se</button>
               </div>
             </form>
             <!-- End Form -->
 
-            <p class="form-text">Get special offers on the latest developments from Front.</p>
+            <p class="form-text">Receba novidades e posts incríveis.</p>
           </div>
 
           <div class="mb-7">

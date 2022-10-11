@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     input.value = ""
 
-    swal("Thanks!", "Thanks for subscribing!", "success");
+    swal("Obrigado por se inscrever!", "Email recebido com sucesso!", "success");
 
   })
 
